@@ -1,10 +1,12 @@
 // Show Page Funtion
 function showPage(page) {
-    // get the Page
-    div = document.getElementById(page);
+    // Make All DIV's unvisible
+    document.querySelectorAll("div").forEach((dd) => {
+        dd.style.display = "none"
+    })
 
-    // Make It visible
-    div.style.display = "block";
+    // Show The Requested Div (page)
+    document.getElementById(page).style.display = "block";
 }
 
 // Get Buttons DataSet
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // if Button clicked:
         button.onclick = function() {
-            console.log(this.dataset.page)
+           showPage(this.dataset.page);
         }
     })
 
