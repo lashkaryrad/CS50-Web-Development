@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpRequest, Http404 # import HttpRequest & Http404
+from django.http import HttpResponse, Http404 # import HttpResponse & Http404
 
 # Create your views here.
 def index(request):
@@ -18,7 +18,7 @@ def section(request, num):
     # if Request number between 1 to 3:
     if 1 <= num <= 3:
         # Return the content in section
-        return HttpRequest(texts[num -1])
+        return HttpResponse(texts[num - 1])
     else:
         # if Not, HTTP 404 Response:
         raise Http404("Not Such a section!")
