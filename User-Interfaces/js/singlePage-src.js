@@ -1,8 +1,8 @@
 // Show Page Funtion
 function showPage(page) {
     // Make All DIV's unvisible
-    document.querySelectorAll("div").forEach((dd) => {
-        dd.style.display = "none"
+    document.querySelectorAll("div").forEach((div) => {
+        div.style.display = "none"
     })
 
     // Show The Requested Div (page)
@@ -17,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // if Button clicked:
         button.onclick = function() {
-           showPage(this.dataset.page);
+            if(this.dataset.page == "home") {
+                console.log(true)
+            }
         }
     })
 
