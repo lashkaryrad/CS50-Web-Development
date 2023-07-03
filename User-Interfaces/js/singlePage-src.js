@@ -2,7 +2,7 @@
 function showPage(page) {
     // Make All DIV's unvisible
     document.querySelectorAll("div").forEach((div) => {
-        div.style.display = "none"
+        div.style.display = "none";
     })
 
     // Show The Requested Div (page)
@@ -17,8 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // if Button clicked:
         button.onclick = function() {
+            // if button is home make all None
             if(this.dataset.page == "home") {
-                console.log(true)
+                document.querySelectorAll("div").forEach((div) => {div.style.display = "none"});
+            } else {
+                showPage(this.dataset.page);
             }
         }
     })
