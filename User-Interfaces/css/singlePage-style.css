@@ -1,4 +1,10 @@
+/* Additional Style */
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+}
+
+/* DIV's Display Should be None  */
+div {
+    display: none;
 }
