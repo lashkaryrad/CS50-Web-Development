@@ -1,3 +1,12 @@
+// Show Page Funtion
+function showPage(page) {
+    // get the Page
+    div = document.getElementById(page);
+
+    // Make It visible
+    div.style.display = "block";
+}
+
 // Get Buttons DataSet
 document.addEventListener("DOMContentLoaded", function() {
 
